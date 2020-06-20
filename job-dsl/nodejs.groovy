@@ -13,6 +13,7 @@ job('NodeJS-DSL-Demo') {
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
     steps {
+        export PATH="${NODEJS_HOME}/bin:${PATH}"
         shell("npm install")
     }
 }
